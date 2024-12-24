@@ -1,0 +1,41 @@
+table {
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 4px black;
+    height: 100px;
+    width: 100px;
+}
+
+.top-middle {
+    border-left: solid;
+    border-right: solid;
+}
+
+.middle-middle {
+    border: solid;
+}
+
+.middle {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.bottom-middle {
+    border-left: solid;
+    border-right: solid;
+}
+
+
+#message {
+    font-size: 20px;
+}
+
+#playAgain {
+    font-size: 20px;
+    padding: 10px;
+    background-color: darkgreen;
+}
