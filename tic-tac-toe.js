@@ -1,6 +1,6 @@
 let board = [['','',''],['','',''],['','',''],];
 let currentPlayer = '';
-let playComputer = false;
+let playComputer = true;
 const player1 = 'Duck';
 const player2 = 'Shark';
 let gameOn = true;
@@ -214,6 +214,25 @@ function computerCheckForRow(player) {
         }
     }
 
+    // Check for diagonal wins
+    if (board[1][1] === player) {
+        if (board[0][0] === player && board[2][2] === '') {
+            board[2][2] = player2;
+            return true;
+        }
+        if (board[0][2] === player && board[2][0] === '') {
+            board[2][0] = player2;
+            return true;
+        }
+        if (board[2][0] === player && board[0][2] === '') {
+            board[0][2] = player2;
+            return true;
+        }
+        if (board[2][2] === player && board[0][0] === '') {
+            board[0][0] = player2;
+            return true;
+        }
+    }
     return false;
 }
 
